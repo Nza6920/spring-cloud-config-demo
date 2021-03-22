@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: configclient
+  profiles:
+    active: prod
+  cloud:
+    config:
+      # 配置服务地址
+      uri: http://localhost:7016/server
+      # 配置验证
+      username: admin
+      password: secret
+      # 开启重试
+      fail-fast: true
+      # 配置重试策咯参数
+      retry:
+        initial-interval: 5000
+        maxInterval: 10000
+        maxAttempts: 10

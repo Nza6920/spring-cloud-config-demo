@@ -1,0 +1,8 @@
+server:
+  port: 7017
+  servlet:
+    context-path: /client
+
+
+custom:
+  example: 'asdfasdf'

@@ -1,0 +1,21 @@
+server:
+  port: 7016
+  servlet:
+    context-path: /server
+
+spring:
+  profiles:
+    # 使用本地文件存储
+    active: native
+  # 配置安全相关
+  security:
+    user:
+      name: admin
+      password: secret
+  cloud:
+    config:
+      server:
+        native:
+          # 指定配置文件位置
+          search-locations:
+            - classpath:/config/configclient
